@@ -55,7 +55,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .header__logo {
@@ -165,7 +165,6 @@ nav a {
 li {
   display: table-cell;
   position: relative;
-  /* padding: 15px 0; */
   padding-top: 5px;
 }
 a {
@@ -173,9 +172,7 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-
   display: inline-block;
-  /* padding: 15px 20px; */
   position: relative;
 }
 li a:after {
@@ -201,90 +198,96 @@ li a:hover:after {
 }
 
 /* Promo Section */
-.promo {
-  z-index: -1;
-  background-color: #121212;
-  opacity: 1;
-  height: 100vh;
+#videowrapper {
+  position: relative;
   overflow: hidden;
-  position: relative;
 }
 
-.background-video-container {
-  pointer-events: none;
-  z-index: 10;
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  bottom: 0rem;
-  left: 0rem;
-}
-.background-video-container video {
-  background-size: cover;
-  height: auto;
-  min-width: 100%;
+#fullScreenDiv {
   min-height: 100%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: auto;
-  position: absolute;
-  top: 50%;
-  right: 0rem;
-  bottom: 0rem;
-  left: 50%;
-}
-
-.background-video-overlay {
-  color: blue;
   height: 100vh;
-  z-index: 20;
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  bottom: 0rem;
-  left: 0rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-}
-.background-video-overlay h3 {
-  margin-top: 47%;
-  color: #fff;
-  font-weight: bold;
-  font-size: 9vw;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.background-video-overlay p {
-  color: #fff;
-  text-align: center;
-  font-size: 6vw;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.background-video-overlay .btn {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 4px;
-  color: #121212;
-  font-size: 24px;
-  height: 100px;
-  line-height: 100px;
-  margin: -50px 0 0 -200px;
-  text-align: center;
-  width: 400px;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: gray;
   position: relative;
-  top: 15%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
 }
 
-.background-video-overlay .btn:hover {
+#video {
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+@media (min-aspect-ratio: 16/9) {
+  #video {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #video {
+    height: 100vh;
+    width: auto;
+    margin-left: 50vw;
+    transform: translate(-50%);
+  }
+}
+
+#videoMessage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+#videoMessage h3 {
+  font-size: 7vh;
+  font-weight: bolder;
+  text-align: center;
+  line-height: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#videoMessage p {
+  font-weight: normal;
+  font-size: 4vh;
+  text-align: center;
+  line-height: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#videoMessage a {
+  border: 2px solid #a3c460;
+  padding: 24px;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 50%
+  );
+  background-size: 3px 3px;
+  z-index: 0;
+}
+
+#videoMessage a:hover {
   transition: 0.3s;
   background-color: #a3c460;
-  color: #fff;
 }
 
 /* Partners Section */
