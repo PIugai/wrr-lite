@@ -249,10 +249,10 @@ li a:hover:after {
   line-height: normal;
 }
 .background-video-overlay h3 {
-  margin-top: 250px;
+  margin-top: 47%;
   color: #fff;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 9vw;
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
@@ -260,7 +260,7 @@ li a:hover:after {
 .background-video-overlay p {
   color: #fff;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 6vw;
   padding-left: 20px;
   padding-right: 20px;
 }
