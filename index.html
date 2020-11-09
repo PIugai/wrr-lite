@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="./images/favicon.svg">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
 </head>
 
 <body>
@@ -288,10 +289,7 @@
         <p class="contacts__address">2899 Guangfu West Road<br>Yinghua International Square<br>Building 2,<br>Unit 601-602<br>Shanghai 200062</p>
       </div>
       <div class="footer__map">
-          <iframe class="map" height="450" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=121.37829154729845%2C31.222247494089572%2C121.3814887404442%2C31.224454032786323&amp;layer=mapnik"
-            style="border: 1px solid black"></iframe><br /><small><a
-              href="https://www.openstreetmap.org/#map=19/31.22335/121.37989">View Larger Map</a></small>
+        <div id="map" class="map"></div>
       </div>
     </div>
       <div class="footer__licence">
@@ -302,5 +300,32 @@
         <p>沪公网安备31010702005270号</p>
       </div>
     </footer>
+    <script>var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([121.380282, 31.223763]),
+          zoom: 16
+        })
+      });
+      const center = map.getView().getCenter();
+        const pinnedLocation = ol.proj.transform(center, 'EPSG:3857', 'EPSG:4326');
+        const feature = new ol.Feature(new ol.geom.Point(center));
+        const pinLayer = new ol.layer.Vector({
+          source: new ol.source.Vector({
+            features: [feature]
+          }),
+          style: new ol.style.Style({
+            image: new ol.style.Icon({
+              src: './images/pin.png',
+            })
+          })
+        });
+        map.addLayer(pinLayer);
+    </script>
   </body>
 </html>

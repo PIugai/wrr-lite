@@ -19,7 +19,7 @@
 :root {
   --black: "#000000";
   --white: "#FFFFFF";
-  --green: "#A3C460";
+  --green: "# ";
   --grey: "#353535";
 
   --helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -581,7 +581,7 @@ li a:hover:after {
 @media (min-width: 1440px) {
   .contacts__address {
     text-align: left;
-    width: 200px;
+    width: 220px;
     padding-right: 32px;
   }
 }
@@ -1186,8 +1186,8 @@ li a:hover:after {
 @media (min-width: 1440px) {
   .example__headline {
     margin: 0;
-    margin-bottom: 55px;
-    margin-top: 42px;
+    margin-bottom: 50px;
+    margin-top: 200px;
   }
 }
 
@@ -1285,4 +1285,13 @@ li a:hover:after {
 
 .slider__item {
   margin-bottom: 20px;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+}
+
+.ol-control {
+  display: none;
 }
