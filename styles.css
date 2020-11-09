@@ -121,6 +121,8 @@ nav ul {
 nav li {
   display: block;
   text-align: center;
+  font-weight: lighter;
+  font-size: 0.8em;
 }
 
 nav a {
@@ -428,6 +430,7 @@ li a:hover:after {
   transition: 0.3s;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .footer__licence a:hover {
@@ -647,6 +650,7 @@ li a:hover:after {
     align-items: flex-start;
     padding-left: 52px;
     width: 708px;
+    padding-bottom: 30px;
   }
 }
 @media (min-width: 1440px) {
