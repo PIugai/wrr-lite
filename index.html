@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="navbar">
     <a class="header__logo" href="#promo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.4 58.4" fill="#fff">
       <path class="a"
         d="M9.06,11.7l4.13,25.06h.13L17.71,11.7h9.84L32.2,36.76h.15L36.61,11.7h8.65L37.65,47.05H27.46L22.7,21.93h-.13L18.16,47H7.68L0,11.66Z" />
@@ -44,7 +44,7 @@
     <label for="nav"></label>
     <nav>
       <ul>
-        <li><a href="#About">About us</a></li>
+        <li><a href="#about">About us</a></li>
         <li><a href="#services">Services</a></li>
         <li class="visually-hidden"><a href="#insights">Insights</a></li>
         <li><a href="#contacts">Contact Us</a></li>
@@ -349,6 +349,18 @@
           })
         });
         map.addLayer(pinLayer);
+    </script>
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-60px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
     </script>
   </body>
 </html>
