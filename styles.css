@@ -303,11 +303,11 @@ li a:hover:after {
 }
 
 #videoMessage h3 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   line-height: normal;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 #videoMessage p {
   /* font-weight: normal; */
@@ -1510,6 +1510,12 @@ li a:hover:after {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 50px;
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  .intro-list__item {
+    width: 600px;
 }
 
 @media (min-width: 1440px) {
@@ -1555,9 +1561,6 @@ li a:hover:after {
   width: 70px;
 }
 
-@media (min-width: 768px) {
-}
-
 @media (min-width: 1440px) {
   .intro-list__item img {
     width: 100px;
@@ -1572,8 +1575,14 @@ li a:hover:after {
 .hero {
   background-color: #1a1a1b;
   position: relative;
-  height: 120vh;
+  height: 180vh;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
 }
 
 .hero__title {
