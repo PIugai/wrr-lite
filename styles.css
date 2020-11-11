@@ -100,7 +100,7 @@ header label:after {
 
 .logo {
   float: left;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.5em;
 }
 
@@ -253,8 +253,8 @@ li a:hover:after {
 }
 
 #videoMessage h3 {
-  font-size: 5vh;
-  font-weight: bolder;
+  font-size: 7vh;
+  font-weight: normal;
   text-align: center;
   line-height: normal;
   padding-left: 20px;
@@ -262,7 +262,7 @@ li a:hover:after {
 }
 #videoMessage p {
   font-weight: normal;
-  font-size: 3vh;
+  font-size: 4vh;
   text-align: center;
   line-height: normal;
   padding-left: 20px;
@@ -376,6 +376,14 @@ li a:hover:after {
     transform: translateX(calc(-250px * 7));
   }
 }
+
+.clients__wrapper p {
+  text-align: center;
+  font-size: 3vh;
+  margin: 0;
+  padding: 0 20px;
+}
+
 .partners__clients {
   background: #353535;
   height: 150px;
@@ -599,7 +607,7 @@ li a:hover:after {
 .programs__headline {
   text-decoration: underline #a3c460;
   margin: 20px;
-  font-size: 50px;
+  font-size: 6vh;
   text-align: center;
 }
 
@@ -624,7 +632,7 @@ li a:hover:after {
 .program-wrapper h3 {
   padding-top: 10px;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .programs-list__item {
@@ -639,6 +647,7 @@ li a:hover:after {
 .programs-list__item a {
   margin-top: auto;
   color: #a3c460;
+  font-weight: bolder;
 }
 
 /* Services section */
@@ -728,7 +737,7 @@ li a:hover:after {
 }
 
 .services__item p {
-  font-size: 2rem;
+  font-size: 3vh;
   line-height: normal;
 }
 
@@ -926,13 +935,14 @@ li a:hover:after {
   font-style: normal;
   font-weight: normal;
   text-transform: none;
-  font-size: 36px;
+  font-size: 6vh;
   line-height: 40px;
   margin-top: 27px;
+  text-decoration: underline #94c83d;
 }
 @media (min-width: 768px) {
   .example__headline {
-    font-size: 60px;
+    font-size: 7vh;
     line-height: 60px;
     margin-top: 43px;
   }
@@ -971,6 +981,7 @@ li a:hover:after {
     width: 436px;
     margin: 0;
     margin-bottom: 69px;
+    font-size: 2.5vh;
   }
 }
 
@@ -1077,7 +1088,7 @@ li a:hover:after {
 .about-info h3 {
   color: #fff;
   text-decoration: underline #a3c460;
-  font-size: 5vh;
+  font-size: 6vh;
   margin-right: 30px;
 }
 
@@ -1095,17 +1106,32 @@ li a:hover:after {
   background: #a3c460;
 }
 @media (min-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+  .about-info h3 {
+    font-size: 7vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .about-info {
     margin-top: 20px;
+    flex-direction: column;
   }
   .about-info p {
     width: 711px;
     padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.5vh;
+    text-align: center;
   }
   .about a {
     padding: 20px;
     color: #1a1a1b;
     background: #a3c460;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1118,10 +1144,21 @@ li a:hover:after {
 
   .about-info {
     flex-direction: column;
+    flex-wrap: inherit;
+    margin: 0;
+  }
+
+  .about-info h3 {
+    font-size: 7vh;
+    margin-left: 0;
   }
 
   .about-info p {
     padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 2.5vh;
+    width: 400px;
   }
 
   .about a {
@@ -1132,6 +1169,7 @@ li a:hover:after {
     padding: 20px;
     border: 2px solid #a3c460;
     background: transparent;
+    margin-left: 0;
   }
   .about a:hover {
     text-decoration: none;
@@ -1158,14 +1196,15 @@ li a:hover:after {
   padding: 15px;
   text-decoration: none;
   font-size: 17px;
+  font-weight: lighter;
 }
 
 /* Intro section */
 .divider {
   color: #f2f2f2;
   margin: 20px;
-  font-weight: bolder;
-  font-size: 3vh;
+  font-weight: normal;
+  font-size: 5vh;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -1179,6 +1218,10 @@ li a:hover:after {
 
 .divider span {
   color: #94c83d;
+}
+
+.divider__content {
+  font-size: 3vh;
 }
 
 @media (min-width: 768px) {
@@ -1202,8 +1245,7 @@ li a:hover:after {
   }
 
   .divider__content {
-    font-size: 1.1rem;
-    /* margin: auto auto auto 30px; */
+    font-size: 2vh;
     margin: auto;
     padding-right: 140px;
   }
@@ -1217,8 +1259,8 @@ li a:hover:after {
   }
   .divider__content {
     padding-right: 300px;
-    margin: auto auto auto 30px;
-    font-size: 1.5rem;
+    margin: auto auto auto 10px;
+    font-size: 3.8vh;
   }
 }
 
@@ -1271,7 +1313,7 @@ li a:hover:after {
 
 .intro-list__item a {
   color: #a3c460;
-  font-weight: 500;
+  font-weight: bold;
   border: 1px solid #fff;
   padding: 10px;
   font-size: 14px;
@@ -1296,13 +1338,11 @@ li a:hover:after {
 }
 
 /* Background animation */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 .hero {
   background-color: #1a1a1b;
   position: relative;
   height: 100vh;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
 }
 
 .hero__title {
