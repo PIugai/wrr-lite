@@ -492,7 +492,7 @@ li a:hover:after {
 /* Footer */
 /* Footer-Map */
 .footer__map {
-  background-image: url(./images/map.png);
+  background-image: url(https://weareready-consultancy.oss-cn-shanghai.aliyuncs.com/wrr-lite/map.png);
   background-size: cover;
 }
 
@@ -681,11 +681,11 @@ li a:hover:after {
 }
 @media (min-width: 768px) {
   .contacts__address {
-    /* font-size: 13px; */
     width: 259px;
     min-height: 80px;
     text-align: left;
-    padding-top: 7px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .contacts__address br {
     display: block;
@@ -694,8 +694,9 @@ li a:hover:after {
 @media (min-width: 1440px) {
   .contacts__address {
     text-align: left;
-    width: 220px;
-    padding-right: 32px;
+    width: 250px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
@@ -1241,7 +1242,8 @@ li a:hover:after {
   margin: 0;
   padding: 0;
   background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./images/chuttersnap-china.jpg") no-repeat fixed;
+    url("https://weareready-consultancy.oss-cn-shanghai.aliyuncs.com/wrr-lite/chuttersnap-china.jpg")
+      no-repeat fixed;
   background: -webkit-gradient(
       linear,
       left top,
@@ -1249,9 +1251,11 @@ li a:hover:after {
       from(rgba(0, 0, 0, 0.6)),
       to(rgba(0, 0, 0, 0.6))
     ),
-    url("./images/chuttersnap-china.jpg") no-repeat fixed;
+    url("https://weareready-consultancy.oss-cn-shanghai.aliyuncs.com/wrr-lite/chuttersnap-china.jpg")
+      no-repeat fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./images/chuttersnap-china.jpg") no-repeat fixed;
+    url("https://weareready-consultancy.oss-cn-shanghai.aliyuncs.com/wrr-lite/chuttersnap-china.jpg")
+      no-repeat fixed;
   /* background-size: cover; */
   display: -webkit-box;
   display: -ms-flexbox;
