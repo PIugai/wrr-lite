@@ -18,6 +18,8 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 /* Styles for "index.html" */
@@ -566,7 +568,7 @@ li a:hover:after {
   position: relative;
 }
 .contacts__wrapper {
-  width: 400px;
+  width: 100%;
   min-height: 114px;
   margin: 0 auto;
   display: -webkit-box;
@@ -606,6 +608,7 @@ li a:hover:after {
     background: #94c83d;
     color: #fff;
     padding: 0.5rem 1rem;
+    margin-left: 25px;
   }
 }
 
@@ -1254,7 +1257,7 @@ li a:hover:after {
 }
 
 .about-info p {
-  width: 350px;
+  width: 100%;
 }
 
 .about a {
