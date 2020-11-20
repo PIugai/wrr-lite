@@ -305,11 +305,12 @@ li a:hover:after {
 }
 
 #videoMessage h3 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   line-height: normal;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 40px;
 }
 #videoMessage p {
   text-align: center;
@@ -1257,6 +1258,7 @@ li a:hover:after {
 }
 
 .about-info p {
+  margin-top: 10px;
   width: 100%;
 }
 
