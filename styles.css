@@ -1559,7 +1559,7 @@ li a:hover:after {
 .hero {
   background-color: #1a1a1b;
   position: relative;
-  height: 200vw;
+  height: 180vh;
   overflow: hidden;
 }
 
@@ -1691,8 +1691,8 @@ li a:hover:after {
 
   -webkit-touch-callout: none;
   -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
+  touch-action: auto;
+  -ms-touch-action: auto;
   -webkit-tap-highlight-color: transparent;
 }
 
