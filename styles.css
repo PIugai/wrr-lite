@@ -12,6 +12,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *,
 *::before,
 *::after {
@@ -305,7 +312,7 @@ li a:hover:after {
 }
 
 #videoMessage h3 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   text-align: center;
   line-height: normal;
   padding-left: 20px;
@@ -449,11 +456,12 @@ li a:hover:after {
 
 .partners__clients {
   background: #353535;
-  height: 150px;
+  height: 100px;
   margin: auto;
   overflow: hidden;
   position: relative;
   width: 100%;
+  margin-top: 40px;
 }
 .partners__clients::before,
 .partners__clients::after {
@@ -597,6 +605,8 @@ li a:hover:after {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
@@ -738,6 +748,7 @@ li a:hover:after {
 
 .program-wrapper h3 {
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .programs-list__item {
@@ -757,6 +768,7 @@ li a:hover:after {
 .programs-list__item a {
   margin-top: auto;
   color: #a3c460;
+  padding-top: 20px;
 }
 
 /* Services section */
@@ -1248,6 +1260,7 @@ li a:hover:after {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-top: 40px;
 }
 
 .about-info h3 {
@@ -1283,6 +1296,8 @@ li a:hover:after {
   .about-info h3 {
     margin-left: auto;
     margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
   .about-info {
     margin-top: 20px;
@@ -1330,6 +1345,7 @@ li a:hover:after {
 
   .about-info h3 {
     margin-left: 0;
+    padding-top: 40px;
   }
 
   .about-info p {
@@ -1523,6 +1539,7 @@ li a:hover:after {
 .intro-list__item img {
   margin: auto;
   width: 70px;
+  margin-top: 30px;
 }
 
 @media (min-width: 768px) {
@@ -1542,12 +1559,22 @@ li a:hover:after {
 .hero {
   background-color: #1a1a1b;
   position: relative;
-  height: 180vh;
+  height: 200vw;
   overflow: hidden;
+}
+
+.hero p {
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 100vh;
+    height: 100vw;
+  }
+}
+
+@media (min-width: 1220px) {
+  .hero {
+    height: 65vw;
   }
 }
 
@@ -1636,4 +1663,114 @@ li a:hover:after {
     transform: scale(20) rotate(960deg) translate(-50%, -50%);
     opacity: 0;
   }
+}
+
+.customer-logos {
+  background-color: #353535;
+}
+
+/* Slider */
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+
+  content: "";
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
 }
